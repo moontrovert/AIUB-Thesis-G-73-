@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\begin{document}
+
+\begin{center}
+    \Large \bfseries{IMPACT OF TRANSFER LEARNING METHOD FOR ADVERSARIAL ROBUSTNESS}
+\end{center}
+
+\section{Introduction}
+In recent times,\textbf{\textit{Deep Neural Networks}} have achieved state-of-the-art.\cite{NIPS2012_c399862d} But When it comes to adversarial examples, machine-learning models are known to be vulnerable. Small imperceptible changes to the input, indistinguishable to the human eye, can fool a neural network into misclassifying. It is crucial to consider these methods carefully when implementing them in safety-critical scenarios, like autonomous vehicles or surgical robots. \cite{WardeFarley20161AP} \cite{yuan2018adversarial}
+
+\setlength{\parskip}{10pt}
+\begingroup
+\raggedright
+Transfer learning stands out as a vital approach for quickly training neural networks, requiring comparatively smaller datasets compared to the amount of data that is needed for training a model from scratch with prior knowledge. The effectiveness of transfer learning in achieving high accuracy has led to significant interest in its application to Convolutional Neural Networks. 
+\endgroup
+
+\section{Literature Review}
+\subsection{Adversarial Examples:}
+Attention to adversarial examples for deep learning models is increasing due to their potential to impact machine learning systems significantly. An adversarial example is a manipulated input data sample that has undergone subtle modifications with the intention of deceiving a machine learning classifier into making an incorrect classification. Adversarial examples pose a significant vulnerability for the majority of machine learning classifiers that are currently in use.\cite{45818} Numerous researchers have investigated techniques for constructing robust networks, only to find that these methods prove ineffective when confronted by more powerful adversaries. \cite{athalye2018obfuscated} There are various categories of attacks based on different threat models.
+\begin{itemize}
+    \item White box Attack:
+    The information about the model is known to the attacker. The fast gradient sign method (FGSM), projected gradient descent, and CW have demonstrated their effectiveness as potent white box attack methods. Adversaries can also be categorized based on their level of knowledge about the specific model they are targeting for their attacks. \cite{grosse2016adversarial} \cite{goodfellow2018making}
+
+    \item Black box Attack:
+    Limited information about the model is known to the attacker. In a black box setting, only the probability vector can be obtained by the adversary. The attacker does not have access to the model in the black box scenario, which is a more realistic model of many security threats.\cite{45818} \cite{goodfellow2018making}
+\end{itemize}
+The vulnerability of neural networks to adversarial perturbations is primarily attributed to their linear characteristics, as supported by recent quantitative findings. This explanation sheds light on the intriguing fact that adversarial examples can deceive diverse machine learning models with different architectures and training sets. The consistent misclassification of these examples challenges the notion that they are rare and precise anomalies in the data space, casting doubt on the hypothesis that they are finely dispersed.\cite{goodfellow2015explaining} 
+
+\subsection{Transfer Learning:}
+Transfer Learning is a machine learning method that has shown to be a great strategy that yields great accuracy in machine learning models. Transfer learning seeks to transfer knowledge from a source domain to a related target domain. \cite{oquab2014learning} It is possible to re-purpose a pre-trained network for different classification tasks by directly training a linear classifier on the features extracted from the penultimate layer.\cite{razavian2014cnn} Transfer learning is used as a method to fine-tune machine learning models for achieving high accuracy.
+
+\setlength{\parskip}{10pt}
+\begingroup
+\raggedright
+Adversarial sample transfer-ability refers to the property that some adversarial samples designed to fool a specific model can fool other models - regardless of their architectural differences. \cite{goodfellow2015explaining}
+\endgroup
+
+\subsection{Adversarial Robustness:} 
+Adversarial Robustness refers to a machine learning model’s ability to resist adversarial attacks that were designed to disrupt its performance. 
+Robust optimization offers principled approaches to train and attack neural networks reliably and universally, providing a concrete security guarantee against any adversary and enhancing network resistance to various adversarial attacks. It introduces the concept of security against a first-order adversary as a broad security guarantee. The saddle point formulation unifies the study of both attacks and defenses within a common theoretical framework, effectively encompassing prior research on adversarial examples. Notably, adversarial training aligns with the optimization of this saddle point problem, while previous methods for attacking neural networks correspond to specific algorithms designed to solve the underlying constrained optimization problem. \cite{madry2017towards}
+
+\setlength{\parskip}{10pt}
+\begingroup
+\raggedright
+The study compared FGSM and PGD during training, finding PGD's superiority in learning more transferable, general features. Lower-level features significantly contributed to robustness against both white-box (WB) and black-box (BB) attacks. Initializing with robust features enhanced overall robustness. Success against BB attacks can be achieved by focusing on lower-level features, while WB attacks target more complex, higher-level features, posing a greater challenge. Exploiting this difference in attack strategies could lead to more formidable adversaries. \cite{davchev2019empirical}
+\endgroup
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{sources.bib}
+
+\end{document}
