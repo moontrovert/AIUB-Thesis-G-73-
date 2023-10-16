@@ -40,12 +40,14 @@ Adversarial sample transfer-ability refers to the property that some adversarial
 
 \begin{itemize}
     \item
+    Feature Extraction:
+    
 
 		
-\item
-Fine Tuning:
-By far the most effective strategy for transfer learning with neural networks is Fine-tuning.\cite{oquab2014learning} This method was originally developed by transferring information from a generative model to a discriminative one and has since been widely adopted with considerable success. The fundamental process includes substituting the final "classifier" layer of a pre-trained network with a new layer that has random initialization for the specific target task. The adjusted network is then fine-tuned through multiple iterations of well-tailored gradient descent on the target training data. Practically every modern visual recognition system follows this procedure. \cite{wang2019growing}
-Studies have revealed that when the whole pre-trained model undergoes optimization with a low learning rate, it can lead to improved performance, and this scheme is also known as "fine-tuning." \cite{chin2021renofeation}
+    \item
+    Fine Tuning:
+    By far the most effective strategy for transfer learning with neural networks is Fine-tuning.\cite{oquab2014learning} This method was originally developed by transferring information from a generative model to a discriminative one and has since been widely adopted with considerable success. The fundamental process includes substituting the final "classifier" layer of a pre-trained network with a new layer that has random initialization for the specific target task. The adjusted network is then fine-tuned through multiple iterations of well-tailored gradient descent on the target training data. Practically every modern visual recognition system follows this procedure. \cite{wang2019growing}
+    Studies have revealed that when the whole pre-trained model undergoes optimization with a low learning rate, it can lead to improved performance, and this scheme is also known as "fine-tuning." \cite{chin2021renofeation}
 \end{itemize}
 
 \subsection{Adversarial Robustness:} 
