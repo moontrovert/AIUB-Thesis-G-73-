@@ -38,6 +38,16 @@ Transfer Learning is a machine learning method that has shown to be a great stra
 Adversarial sample transfer-ability refers to the property that some adversarial samples designed to fool a specific model can fool other models - regardless of their architectural differences. \cite{goodfellow2015explaining}
 \endgroup
 
+\begin{itemize}
+    \item
+Feature Extraction:
+		
+\item
+Fine Tuning:
+By far the most effective strategy for transfer learning with neural networks is Fine-tuning.\cite{oquab2014learning} This method was originally developed by transferring information from a generative model to a discriminative one and has since been widely adopted with considerable success. The fundamental process includes substituting the final "classifier" layer of a pre-trained network with a new layer that has random initialization for the specific target task. The adjusted network is then fine-tuned through multiple iterations of well-tailored gradient descent on the target training data. Practically every modern visual recognition system follows this procedure. \cite{wang2019growing}
+Studies have revealed that when the whole pre-trained model undergoes optimization with a low learning rate, it can lead to improved performance, and this scheme is also known as "fine-tuning." \cite{chin2021renofeation}
+\end{itemize}
+
 \subsection{Adversarial Robustness:} 
 Adversarial Robustness refers to a machine learning model’s ability to resist adversarial attacks that were designed to disrupt its performance. 
 Robust optimization offers principled approaches to train and attack neural networks reliably and universally, providing a concrete security guarantee against any adversary and enhancing network resistance to various adversarial attacks. It introduces the concept of security against a first-order adversary as a broad security guarantee. The saddle point formulation unifies the study of both attacks and defenses within a common theoretical framework, effectively encompassing prior research on adversarial examples. Notably, adversarial training aligns with the optimization of this saddle point problem, while previous methods for attacking neural networks correspond to specific algorithms designed to solve the underlying constrained optimization problem. \cite{madry2017towards}
